@@ -41,6 +41,8 @@ for chunk in pd.read_csv(os.path.join(__location__, dataset_user), chunksize=chu
 
 #upload weather temp
 for chunk in pd.read_csv(os.path.join(__location__, weather_temp), chunksize=chunksize):
+    #rename(switch) min and max column
+    chunk = chunk.rename(columns={'min': 'max', 'max': 'min', 'normal_min': 'normal_max', 'normal_max': 'normal_min'})
     chunk['date'] = pd.to_datetime(chunk['date'].astype(str), format='%Y%m%d')
     chunk.to_sql('staging_weather_temp', engine, if_exists = 'append', index = False)
 
