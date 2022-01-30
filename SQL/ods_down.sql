@@ -1,0 +1,8 @@
+--ODS table down
+DROP TABLE IF EXISTS ods_weather
+DROP TABLE IF EXISTS ods_tip
+DROP TABLE IF EXISTS ods_user
+DROP TABLE IF EXISTS ods_review
+DROP TABLE IF EXISTS ods_business
+DROP TABLE IF EXISTS ods_checkin
+DROP MATERIALIZED VIEW review_agg
