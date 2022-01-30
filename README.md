@@ -1,5 +1,7 @@
 # dproject
 
+Simple ETL using PostgreSQL on Yelp dataset 
+
 ```bash
 Docker build -t dproject_image .
 Docker run -d -p dproject_image
